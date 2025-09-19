@@ -7,32 +7,33 @@ const VideoPinSection = () => {
     query: "(max-width: 768px)",
   });
 
-  useGSAP(() => {
-    if (!isMobile) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".vd-pin-section",
-          start: "-15% top",
-          end: "200% top",
-          scrub: 1.5,
-          pin: true,
-        },
-      });
+  // Don't render anything on mobile
+  if (isMobile) {
+    return null;
+  }
 
-      tl.to(".video-box", {
-        clipPath: "circle(100% at 50% 50%)",
-        ease: "power1.inOut",
-      });
-    }
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".vd-pin-section",
+        start: "-15% top",
+        end: "200% top",
+        scrub: 1.5,
+        pin: true,
+      },
+    });
+
+    tl.to(".video-box", {
+      clipPath: "circle(100% at 50% 50%)",
+      ease: "power1.inOut",
+    });
   });
 
   return (
     <section className="vd-pin-section">
       <div
         style={{
-          clipPath: isMobile
-            ? "circle(100% at 50% 50%)"
-            : "circle(8% at 50% 50%)",
+          clipPath: "circle(8% at 50% 50%)",
         }}
         className="size-full video-box"
       >
@@ -51,7 +52,7 @@ const VideoPinSection = () => {
           }}
         />
 
-        <div className="abs-center md:scale-100 scale-200">
+        <div className="abs-center">
           <img
             src="/images/circle-text.svg"
             alt="circle-text"
