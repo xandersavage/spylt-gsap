@@ -48,7 +48,7 @@ const BenefitSection = () => {
         <div className="col-center">
           <p>
             Unlock the Advantages: <br />
-            Explore the Key Benefits of choosing SPYLT
+            Explore the Key Benefits of Choosing SPYLT
           </p>
 
           <div className="mt-20 col-center">
@@ -83,7 +83,7 @@ const BenefitSection = () => {
           </div>
 
           <div className="md:mt-0 mt-10">
-            <p>And much more...</p>
+            <p>And much more ...</p>
           </div>
         </div>
       </div>
@@ -94,4 +94,5 @@ const BenefitSection = () => {
     </section>
   );
 };
+
 export default BenefitSection;
