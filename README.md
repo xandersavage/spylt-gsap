@@ -2,6 +2,8 @@
 
 Welcome to the Spylt Landing Page project! This repository contains the source code for a visually stunning, interactive landing page for Spylt, a fictional beverage company. The project leverages modern web technologies and animation libraries to deliver an engaging user experience that showcases Spylt's brand, products, and values.
 
+Live preview: https://spylt-gsap-orpin.vercel.app/
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
