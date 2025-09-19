@@ -20,20 +20,26 @@ const TestimonialSection = () => {
       },
     });
 
+    // Responsive animation values
+    const isMobile = window.innerWidth < 768;
+    const firstTitleX = isMobile ? 40 : 70;
+    const secTitleX = isMobile ? 15 : 25;
+    const thirdTitleX = isMobile ? -30 : -50;
+
     tl.to(".testimonials-section .first-title", {
-      xPercent: 70,
+      xPercent: firstTitleX,
     })
       .to(
         ".testimonials-section .sec-title",
         {
-          xPercent: 25,
+          xPercent: secTitleX,
         },
         "<"
       )
       .to(
         ".testimonials-section .third-title",
         {
-          xPercent: -50,
+          xPercent: thirdTitleX,
         },
         "<"
       );
@@ -49,7 +55,7 @@ const TestimonialSection = () => {
     });
 
     pinTl.from(".vd-card", {
-      yPercent: 150,
+      yPercent: isMobile ? 100 : 150,
       stagger: 0.2,
       ease: "power1.inOut",
     });
@@ -67,7 +73,7 @@ const TestimonialSection = () => {
 
   return (
     <section className="testimonials-section">
-      <div className="absolute size-full flex flex-col items-center pt-[5vw]">
+      <div className="absolute size-full flex flex-col items-center md:pt-[5vw] pt-[10vw]">
         <h1 className="text-black first-title">What's</h1>
         <h1 className="text-light-brown sec-title">Everyone</h1>
         <h1 className="text-black third-title">Talking</h1>

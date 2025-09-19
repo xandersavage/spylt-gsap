@@ -190,26 +190,26 @@ body::-webkit-scrollbar {
   }
 
   .benefit-section {
-    @apply min-h-dvh bg-[#222123] overflow-hidden relative;
+    @apply min-h-[200vh] bg-[#222123] overflow-hidden relative;
 
     p {
       @apply text-milk font-paragraph text-center text-lg;
     }
 
     .first-title {
-      @apply rotate-[3deg] relative z-10;
+      @apply md:rotate-[3deg] rotate-[2deg] relative z-10;
     }
 
     .second-title {
-      @apply rotate-[-1deg] md:-translate-y-5;
+      @apply md:rotate-[-1deg] rotate-[-0.5deg] md:-translate-y-5 -translate-y-2;
     }
 
     .third-title {
-      @apply rotate-[1deg] md:-translate-y-12 relative z-10;
+      @apply md:rotate-[1deg] rotate-[0.5deg] md:-translate-y-12 -translate-y-4 relative z-10;
     }
 
     .fourth-title {
-      @apply rotate-[-5deg] md:-translate-y-12;
+      @apply md:rotate-[-5deg] rotate-[-2deg] md:-translate-y-12 -translate-y-4;
     }
 
     .vd-pin-section {
@@ -230,18 +230,18 @@ body::-webkit-scrollbar {
   }
 
   .testimonials-section {
-    @apply bg-milk relative w-full h-[120dvh];
+    @apply bg-milk relative w-full h-[120dvh] mt-20;
 
     .pin-box {
-      @apply flex items-center justify-center w-full ps-52 absolute 2xl:bottom-32 bottom-[50vh];
+      @apply flex items-center justify-center w-full md:ps-52 ps-0 absolute 2xl:bottom-32 md:bottom-[50vh] bottom-[40vh];
 
       .vd-card {
-        @apply md:w-96 w-80 flex-none md:rounded-[2vw] rounded-3xl -ms-44 overflow-hidden 2xl:relative absolute border-[.5vw] border-milk;
+        @apply md:w-96 w-64 flex-none md:rounded-[2vw] rounded-2xl md:-ms-44 -ms-20 overflow-hidden 2xl:relative absolute border-[.5vw] border-milk;
       }
     }
 
     h1 {
-      @apply uppercase text-[20.5vw] leading-[105%] tracking-[-.4vw] ml-[2vw] font-bold;
+      @apply uppercase md:text-[20.5vw] text-[15vw] leading-[105%] tracking-[-.4vw] md:ml-[2vw] ml-[1vw] font-bold;
     }
   }
 

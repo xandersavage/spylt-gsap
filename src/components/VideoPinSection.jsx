@@ -31,12 +31,25 @@ const VideoPinSection = () => {
       <div
         style={{
           clipPath: isMobile
-            ? '"circle(100% at 50% 50%)",'
+            ? "circle(100% at 50% 50%)"
             : "circle(8% at 50% 50%)",
         }}
         className="size-full video-box"
       >
-        <video src="/videos/pin-video.mp4" playsInline autoPlay muted loop />
+        <video
+          src="/videos/pin-video.mp4"
+          playsInline
+          autoPlay
+          muted
+          loop
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            console.log("Video failed to load:", e);
+          }}
+          onLoadStart={() => {
+            console.log("Video started loading");
+          }}
+        />
 
         <div className="abs-center md:scale-100 scale-200">
           <img
